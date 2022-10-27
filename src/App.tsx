@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.css"
+import Todo from "./components/models/todo";
+import Todos from "./components/Todos";
 
 function App() {
+  const todos = [
+    new Todo("react sucks!"),
+    new Todo("what is tsx!!"),
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.wrapper}>
+      <Todos items={todos}> 
+    <div>
+       Lorem ipsum dolor sit amet consectetur adipis
+       icing elit. Tempora nam, sunt quam amet laborum, 
+       veniam quasi rem eveniet sed unde, nisi quo odio neque.
+        Molestiae dolor eum ipsum earum optio!
+      </div>
+        </Todos>
     </div>
   );
 }
